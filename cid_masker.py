@@ -52,7 +52,7 @@ def call_openAI(system_content, prompt):
         response.raise_for_status()
         result = response.json()
 
-        # ✅ Extract only the assistant's message content
+        # Extract only the assistant's message content
         content = result["choices"][0]["message"]["content"]
         print(content)
         return content
