@@ -70,7 +70,7 @@ st.write("Welcome! This tool masks CID data")
 if st.button("Mask CID data"):
     with st.spinner("Masking data.."):
         prompt = (f'Given the following user data : {extracted_text}, identify the CID data and masked it with "XXXX", '
-                  f'Return only 2 section, "Original Data" and "Masked Data" without any explanation.')
+                  f'Return only 2 section in tabular format, "Original Data" and "Masked Data" without any explanation.')
         system_prompt = "Act as a experienced analyst identifying CID data"
         insights = call_openAI(system_prompt, prompt)
         st.success("Generated Data")
