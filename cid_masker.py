@@ -1,7 +1,6 @@
 import streamlit as st
 from PyPDF2 import PdfReader
 import requests
-import json
 
 uploaded_file = st.file_uploader("upload the file", type="pdf")
 
